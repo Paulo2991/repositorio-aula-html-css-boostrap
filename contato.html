@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+</head>
+
+  <body>
+  
+  <!-- Hero -->
+  <div class="p-5 text-center bg-image rounded-3" style="background-image: url('img/ContatoT.jpg'); background-size: cover; background-position: center; height: 100vh;">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">FALE CONOSCO AGORA MESMO!</h1>
+          <h4 class="mb-3">Aguardamos seu contato através do formulário ou de nossos telefones para uma resposta mais rápida.</h4>
+          <a class="btn btn-warning" href="https://api.whatsapp.com/send?phone=5511950523010" role="button"><i aria-hidden="true" class="fab fa-whatsapp" style="margin-right: 10px"></i> <strong>QUERO AJUDA TÉCNICA AGORA</strong></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- Hero -->
+
+
+    <div class="container" style="margin-top: 20px;">
+      <h2 class="text-center mb-4">Entre em Contato</h2>  <!-- Adicione este h2 -->
+      <form class="needs-validation" novalidate>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom01">Nome:</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Nome" value="" required>
+            <div class="valid-feedback">
+              Tudo certo!
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom02">Nome da Empresa</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Nome da Empresa" value="" required>
+            <div class="valid-feedback">
+              Tudo certo!
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom03">E-mail</label>
+            <input type="email" class="form-control" id="validationCustom03" placeholder="E-mail" value="" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}">
+            <div class="valid-feedback">
+              Tudo certo!
+            </div>
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom06">Cidade</label>
+            <input type="text" class="form-control" id="validationCustom06" placeholder="Cidade" required>
+            <div class="invalid-feedback">
+              Por favor, informe uma cidade válida.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom07">Estado</label>
+            <input type="text" class="form-control" id="validationCustom07" placeholder="Estado" required>
+            <div class="invalid-feedback">
+              Por favor, informe um estado válido.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom08">CEP</label>
+            <input type="text" class="form-control" id="validationCustom08" placeholder="CEP" required>
+            <div class="invalid-feedback">
+              Por favor, informe um CEP válido.
+            </div>
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom04">Assunto</label>
+            <input type="text" class="form-control" id="validationCustom04" placeholder="Assunto" value="" required>
+            <div class="valid-feedback">
+              Tudo certo!
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom05">Mensagem:</label>
+            <textarea class="form-control" name="txtMensagem" id="validationCustom05" placeholder="Digite aqui sua mensagem" rows="4" required></textarea>
+            <div class="valid-feedback">
+              Tudo certo!
+            </div>
+          </div>
+        </div>
+    
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Concordo com a validade das informações fornecidas
+            </label>
+            <div class="invalid-feedback">
+              Você deve concordar antes de continuar.
+            </div>
+          </div>
+        </div>
+    
+        <button class="btn btn-dark" type="submit">Enviar</button>
+      </form>
+    </div>
+    
+    
+  
+  
+    
+    <script>
+    // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+        var forms = document.getElementsByClassName('needs-validation');
+        // Faz um loop neles e evita o envio
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
+
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAWE2S9M2Lq5Dp6OwD" crossorigin="anonymous"></script>
+
+<!-- Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.4/umd/popper.min.js" integrity="sha384-Szj/XB2Bf3w9P6Kwf5geSj6h6zR/3epX8x8fsh+iu8JDpMbQK6vF2vhJqzn34w0fZ" crossorigin="anonymous"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
+
+  
